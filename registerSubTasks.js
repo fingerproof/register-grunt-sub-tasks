@@ -7,7 +7,8 @@ function isArrayLike (val) { return _.isArray(val) || _.isArguments(val); }
 function format (params, separator) {
 	params = isArrayLike(params) ? params : [params];
 	if (!_.isFunction(separator)) {
-		separator = function separator (curr) { return arguments[1] + curr; };
+		var sep = separator;
+		separator = function separator (curr) { return sep + curr; };
 	}
 	return _.reduce(params, function reduce (prev, curr, index) {
 		return curr ? prev + separator(curr, index, params) : prev;
