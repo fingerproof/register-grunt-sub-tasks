@@ -5,13 +5,15 @@
 	"description": "Provides a simple way to register Grunt sub-tasks.",
 	"author": "fingerproof",
 	"license": "MIT",
+	"homepage": "https://github.com/fingerproof/register-grunt-sub-tasks",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/fingerproof/register-grunt-sub-tasks.git"
+		"url": "git://github.com/fingerproof/register-grunt-sub-tasks.git"
 	},
 	"bugs": {
 		"url": "https://github.com/fingerproof/register-grunt-sub-tasks/issues"
 	},
 	"main": "registerSubTasks.js",
+	"peerDependencies": { "grunt": "~0.4.2" },
 	"dependencies": { "lodash": "~2.4.1" }
 }
