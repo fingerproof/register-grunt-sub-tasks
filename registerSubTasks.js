@@ -9,8 +9,8 @@ function format (params, separator) {
 	if (!_.isFunction(separator)) {
 		separator = function separator (curr) { return arguments[1] + curr; };
 	}
-	return _.reduce(params, function reduce (prev, curr, i, array) {
-		return curr ? prev + separator(curr, i, array) : prev;
+	return _.reduce(params, function reduce (prev, curr, index) {
+		return curr ? prev + separator(curr, index, params) : prev;
 	}, "");
 }
 
